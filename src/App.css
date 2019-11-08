@@ -1,0 +1,253 @@
+body {
+	background-color: black;
+}
+
+header {
+	background: white;
+	padding: 20px;
+}
+
+header > h1 {
+	color: #24272E;
+	text-align: center;
+	font-family: Righteous, sans-serif;
+  font-size: 40px;
+  margin: 0;
+}
+
+.score-board {
+	margin: 50px auto;
+	border: 2px solid white;
+	border-radius: 20px;
+	text-align: center;
+	width: 400px;
+	color: white;
+	font-size: 60px;
+	padding: 20px 20px;	
+	font-family: Audiowide, sans-serif;
+	position: relative;
+}
+
+.badge {
+	background: #E2584D;
+	color: white;
+	font-size: 25px;
+	padding: 2px 5px;
+	font-family: Audiowide, sans-serif;
+}
+
+#user-level {
+	position: absolute;;
+	top: 40px;
+	left: -40px;
+}
+
+#computer-level {
+	position: absolute;;
+	top: 40px;
+	right: -45px;
+}
+
+.result {
+	color: white;
+	padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 75px;
+}
+
+.result > p {	
+	text-align: center; 
+	font-family: Luckiest Guy, sans-serif;
+	color: white;
+    font-size: 25px;
+}
+
+.choices {
+	margin-top: 8px;
+	text-align: center;
+}
+
+.choices img {
+  width: 160px;
+  height: 160px;
+}
+
+.choice {
+	border: 2px solid white;
+	border-radius: 50%;
+	margin: 8px 30px;
+	padding: 20px;
+	display: inline-block;
+	transition: all 0.3s ease;
+}
+
+.choice-dull {
+	filter: brightness(30%);
+}
+
+.choice-bright {
+	filter: brightness(100%);
+}
+
+.choice:hover {
+	cursor: pointer;
+	background-color: #CCCCFF;
+}
+
+.choice-force-hover {
+	cursor: pointer;
+    background-color: #CCCCFF;
+}
+
+.win-glow {
+	border: 8px solid #99FF00;
+	background-color: #99FF00;
+}
+
+.loose-glow {
+	border: 8px solid #CC0000;
+	background-color: #CC0000;
+}
+
+.draw-glow {
+	border: 8px solid #FFFF00;
+	background-color: #FFFF00;
+}
+
+#action-message {
+	color: white;
+	padding-top: 15px;
+	text-align: center;
+	font-size: 30px;
+	font-family: Holtwood One SC, sans-serif;
+}
+
+.mode-buttons {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  text-align: center;
+  
+}
+
+.mode-buttons button {
+  width: 220px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.btn-light:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+.draw-message {
+	text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: Audiowide, sans-serif;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.rules {
+	width: 500px;
+    text-align: left;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.game-section {
+	width: 100%;
+}
+
+.game-section-left {
+	width: 30%;
+	float: left;
+}
+
+.game-section-center {
+	width: 40%;
+	float: left;
+	background-color: #0c224a;
+	min-height: 800px;
+}
+
+.game-section-center-inner-wrapper {
+	padding-left: 6px;
+    padding-right: 6px;
+}
+
+.game-section-right {
+	width: 30%;
+	float: left;
+}
+
+.player-name-wrapper {
+	background: #E2584D;
+    color: white;
+    padding: 2px 5px;
+	font-family: Audiowide, sans-serif;
+	text-align: center;
+}
+
+.player-name {
+    color: white;
+    font-size: 33px;
+	font-family: Audiowide, sans-serif;
+}
