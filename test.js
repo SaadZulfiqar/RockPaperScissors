@@ -1,6 +1,10 @@
 const assert = require('assert')
 import { OPTIONS, RESULTS, getResult, getRandomChoice, checkOption } from './src/shared';
 
+// mocha will look for test file in the root of your directory, 
+// here are the test cases for testing game algo
+ 
+
 // testing rules
 it('paper should beat rock', () => {
   const result = getResult(OPTIONS.PAPER, OPTIONS.ROCK);
