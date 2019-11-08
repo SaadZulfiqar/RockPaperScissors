@@ -1,17 +1,21 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import Result from '../components/result';
+
+
 class ScoreBoard extends Component {
     static propTypes = {
         game: PropTypes.object
     }
     render() {
         const { game } = this.props;
+        const history = game.history;
+        const theEnd = game.gameEnd;
         return (
             <div>
-                <div className="player-name-wrapper">
+                {/* <div className="player-name-wrapper">
                     <span className="player-name">SCOREBOARD</span>
-                </div>
+                </div> */}
                 <div className="game-section-center-inner-wrapper">
                     <div className="score-board">
                         <div>
@@ -23,6 +27,18 @@ class ScoreBoard extends Component {
                     </div>
                     <div>
                         <Result message={game.message} />
+                        {
+                            theEnd && <div className="alert alert-info">
+                                <p>Result of each round played:</p>
+                                <ul>
+                                    {
+                                        history.map((message) => {
+                                            return <li><span dangerouslySetInnerHTML={{ __html: message }} /></li>;
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        }
                     </div>
                 </div>
 

@@ -16,7 +16,9 @@ function* playAgain() {
             context: game.context,
             played: 0,
             message: getMessageHtml(3, "Play", "Let's play the game again..."),
-            draw: 0
+            draw: 0,
+            history: [],
+            gameEnd: false
         }
     });
     const mode = yield select(getMode);
@@ -52,21 +54,26 @@ function* chooseChoice(action) {
         game.played += 1; // increment games played
         let messageA = `${game.context.playerA}'s ${optionA}`;
         let messageB = `${game.context.playerB}'s ${optionB}`;
-        let message = ``;
+        let message = ``; let round = `Round # ${game.played}`;
 
         // message result
         if (result.RESULT === RESULTS.WIN) {
             game.context.playerAScore += 1; // player A won
             message = getMessageHtml(1, RESULTS.WIN, `${messageA} beats ${messageB}`);
+            round = `${round} - ${messageA} beats ${messageB}`;
         }
         else if (result.RESULT === RESULTS.LOST) {
             game.context.playerBScore += 1; // player B won
             message = getMessageHtml(1, RESULTS.LOST, `${messageB} beats ${messageA}`);
+            round = `${round} - ${messageB} beats ${messageA}`;
         }
         else if (result.RESULT === RESULTS.DRAW) { // draw
             game.draw += 1;
             message = getMessageHtml(1, RESULTS.DRAW, `${messageA} draws with ${messageB}`);
+            round = `${round} - ${messageA} draws with ${messageB}`;
         }
+
+        game.history.push(round);
 
         addCSSClasses(mode, game, optionA, optionB);
         yield put({
@@ -75,7 +82,9 @@ function* chooseChoice(action) {
                 context: game.context,
                 played: game.played,
                 message: message,
-                draw: game.draw
+                draw: game.draw,
+                history: game.history,
+                gameEnd: false
             }
         });
 
@@ -111,7 +120,9 @@ function* chooseChoice(action) {
                 context: game.context,
                 played: game.played,
                 message: message,
-                draw: game.draw
+                draw: game.draw,
+                history: game.history,
+                gameEnd: true
             }
         });
     }

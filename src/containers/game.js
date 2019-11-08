@@ -25,11 +25,11 @@ class Game extends Component {
                         <Choices player={game.context.playerA} choices={game.context.playerAImages} chooseChoice={this.props.chooseChoice} clickable={mode === MODES.USER_VS_COMPUTER} />
                     </div>
                     <div className="game-section-center">
-                        <ScoreBoard game={game} />
                         <div className="mode-buttons">
                             <button className="btn btn-light" onClick={this.reloadPage}>Go to modes</button>
                             <button style={{ 'marginLeft': '10px' }} className="btn btn-light" onClick={this.props.playAgain}>Play again</button>
                         </div>
+                        <ScoreBoard game={game} />
                     </div>
                     <div className="game-section-right">
                         <Choices player={game.context.playerB} choices={game.context.playerBImages} chooseChoice={this.props.chooseChoice} clickable={false} />

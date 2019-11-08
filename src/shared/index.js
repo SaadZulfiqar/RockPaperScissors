@@ -132,7 +132,7 @@ export const removeCSSClasses = (mode, game, optionA, optionB) => {
 export const getMessageHtml = (type, result, message) => {
     let className = "alert"; let header = "";
     if (type === 1) {
-        header = "TURN END - ";
+        header = "ROUND END - ";
     } else if (type === 2) {
         header = "GAME END - ";
     }
@@ -155,6 +155,8 @@ export const defaultState = {
         played: 0,
         context: {},
         message: getMessageHtml(3, "Play", "Let's play the game..."),
+        history: [],
+        gameEnd: false
     },
     mode: null,
     screen: SECREENS.SELECT_MODE
