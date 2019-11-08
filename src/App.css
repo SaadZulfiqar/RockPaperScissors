@@ -52,7 +52,6 @@ header > h1 {
 	color: white;
 	padding-top: 1px;
     padding-bottom: 1px;
-    margin-top: 75px;
 }
 
 .result > p {	
@@ -224,7 +223,7 @@ header > h1 {
 .game-section-center {
 	width: 40%;
 	float: left;
-	background-color: #0c224a;
+	background-color:black;
 	min-height: 800px;
 }
 
