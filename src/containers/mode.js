@@ -32,7 +32,7 @@ class Mode extends Component {
                             <strong>Note:</strong>
                             <ul>
                                 <li>There are {MAX_GAMES_IN_ONE_GO} rounds per game.</li>
-                                <li>It uses e6 features so please use latest browsers to run the game.</li>
+                                <li>It uses e6 features so please use latest browsers (preferably chrome) to run the game.</li>
                             </ul>
                         </div>
                     </div>
