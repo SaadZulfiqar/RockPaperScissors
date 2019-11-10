@@ -17,7 +17,7 @@ class App extends Component {
     playAgain: PropTypes.func
   }
   render() {
-    const { mode, screen, game } = this.props;
+    const { screen } = this.props;
     return (
       <div>
         {

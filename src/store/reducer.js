@@ -23,6 +23,9 @@ const reducer = (state = defaultState, action) => {
             console.log(action);
             newState.game = action.value;
             break;
+
+        default:
+            break;
     }
     return newState;
 };
