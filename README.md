@@ -10,5 +10,7 @@ Steps of running this game.
 
 NOTE: Roack paper scissor MVP - It uses e6 features so please use latest browsers (preferably chrome) to run the game.
 
+Game is deployed on https://rockpaperscissordoordie.herokuapp.com/ Enjoy!!!!!
+
 
 
