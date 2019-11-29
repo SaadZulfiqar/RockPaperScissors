@@ -1,4 +1,4 @@
-## Developer Assignment - Rock Paper Scissors  
+## Rock Paper Scissors  
 
 Steps of running this game.
 * git clone https://github.com/SaadZulfiqar/RockPaperScissors.git
